@@ -18,9 +18,21 @@ export default function MainLayout() {
           </Link>
           <Link 
             to="/films" 
-            className={`text-lg uppercase tracking-wider hover:text-sw-yellow transition-colors ${pathname.includes('films') ? 'text-sw-yellow font-bold' : 'text-gray-400'}`}
+            className={`text-lg uppercase tracking-wider hover:text-sw-yellow transition-colors ${pathname.includes('/films') ? 'text-sw-yellow font-bold' : 'text-gray-400'}`}
           >
             Films
+          </Link>
+          <Link 
+            to="/characters" 
+            className={`text-lg uppercase tracking-wider hover:text-sw-yellow transition-colors ${pathname.includes('/characters') ? 'text-sw-yellow font-bold' : 'text-gray-400'}`}
+          >
+            Characters
+          </Link>
+          <Link 
+            to="/planets" 
+            className={`text-lg uppercase tracking-wider hover:text-sw-yellow transition-colors ${pathname.includes('/planets') ? 'text-sw-yellow font-bold' : 'text-gray-400'}`}
+          >
+            Planets
           </Link>
         </nav>
       </header>

@@ -21,3 +21,16 @@ export async function fetchFilmById(id: string) {
   }
   return res.json();
 }
+
+// Adding generic fetcher to handle characters and planets with pagination
+export async function fetchResource(resourceType: string, page: number = 1) {
+  const url = `${BASE_URL}/${resourceType}/?page=${page}`;
+  // console.log("fetching resource:", url);
+  const res = await fetch(url);
+  
+  if (!res.ok) {
+    throw new Error(`Failed to fetch ${resourceType} from SWAPI`);
+  }
+  
+  return res.json();
+}
