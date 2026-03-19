@@ -16,7 +16,6 @@ export default function OpeningCrawl({ episode, title, crawlBody }: any) {
         <div 
           ref={crawlRef}
           className="absolute origin-bottom animate-crawl text-center max-w-2xl px-8"
-          style={{ transform: 'rotateX(20deg)' }}
         >
           <p className="text-xl mb-6">Episode {episode}</p>
           <h1 className="text-4xl uppercase mb-12 tracking-widest">{title}</h1>
@@ -28,6 +27,4 @@ export default function OpeningCrawl({ episode, title, crawlBody }: any) {
           </div>
         </div>
       </div>
-    </div>
-  )
-}
+// TODO: might need to adjust crawl speed based on text length later
