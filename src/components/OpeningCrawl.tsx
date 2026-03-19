@@ -27,4 +27,8 @@ export default function OpeningCrawl({ episode, title, crawlBody }: any) {
           </div>
         </div>
       </div>
+    </div>
+  )
+}
+
 // TODO: might need to adjust crawl speed based on text length later
