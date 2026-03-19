@@ -34,6 +34,24 @@ export default function MainLayout() {
           >
             Planets
           </Link>
+          <Link 
+            to="/starships" 
+            className={`text-lg uppercase tracking-wider hover:text-sw-yellow transition-colors ${pathname.includes('/starships') ? 'text-sw-yellow font-bold' : 'text-gray-400'}`}
+          >
+            Starships
+          </Link>
+          <Link 
+            to="/species" 
+            className={`text-lg uppercase tracking-wider hover:text-sw-yellow transition-colors ${pathname.includes('/species') ? 'text-sw-yellow font-bold' : 'text-gray-400'}`}
+          >
+            Species
+          </Link>
+          <Link 
+            to="/vehicles" 
+            className={`text-lg uppercase tracking-wider hover:text-sw-yellow transition-colors ${pathname.includes('/vehicles') ? 'text-sw-yellow font-bold' : 'text-gray-400'}`}
+          >
+            Vehicles
+          </Link>
         </nav>
       </header>
       
