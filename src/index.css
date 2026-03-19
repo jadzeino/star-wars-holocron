@@ -10,13 +10,29 @@ body {
   background-color: var(--sw-black);
   color: white;
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
+  overflow-x: hidden;
 }
 
-.text-sw-yellow {
-  color: var(--sw-yellow);
+/* Star Wars utilities */
+.perspective-\[400px\] {
+  perspective: 400px;
+}
+.origin-bottom {
+  transform-origin: 50% 100%;
 }
 
-.border-sw-yellow {
-  border-color: var(--sw-yellow);
+@keyframes crawl {
+  0% {
+    top: 100%;
+    transform: rotateX(20deg) translateZ(0);
+  }
+  100% { 
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}
+
+.animate-crawl {
+  animation: crawl 60s linear;
 }

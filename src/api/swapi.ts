@@ -13,4 +13,11 @@ export async function fetchFilms() {
   return data.results;
 }
 
-// TODO: need to add characters later
+// NOTE: added today to get deep link working
+export async function fetchFilmById(id: string) {
+  const res = await fetch(`${BASE_URL}/films/${id}`);
+  if (!res.ok) {
+    throw new Error('Failed to fetch film from SWAPI');
+  }
+  return res.json();
+}
