@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://jadzeino.github.io/holocron/sitemap.xml
+Sitemap: https://jadzeino.github.io/star-wars-holocron/sitemap.xml

@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jadzeino.github.io/holocron/</loc>
+    <loc>https://jadzeino.github.io/star-wars-holocron/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://jadzeino.github.io/holocron/people</loc>
+    <loc>https://jadzeino.github.io/star-wars-holocron/people</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jadzeino.github.io/holocron/films</loc>
+    <loc>https://jadzeino.github.io/star-wars-holocron/films</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jadzeino.github.io/holocron/planets</loc>
+    <loc>https://jadzeino.github.io/star-wars-holocron/planets</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jadzeino.github.io/holocron/species</loc>
+    <loc>https://jadzeino.github.io/star-wars-holocron/species</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jadzeino.github.io/holocron/starships</loc>
+    <loc>https://jadzeino.github.io/star-wars-holocron/starships</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jadzeino.github.io/holocron/vehicles</loc>
+    <loc>https://jadzeino.github.io/star-wars-holocron/vehicles</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
