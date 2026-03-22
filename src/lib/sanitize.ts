@@ -11,6 +11,5 @@ export function sanitizeSearchInput(
   return value
     .replace(/<[^>]*>/g, "")          // strip HTML tags
     .replace(/[<>"'`;(){}[\]\\]/g, "") // remove dangerous punctuation
-    .slice(0, maxLength)               // enforce max length
-    .trim();
+    .slice(0, maxLength);              // enforce max length
 }
