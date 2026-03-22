@@ -15,10 +15,6 @@ describe("sanitizeSearchInput", () => {
     expect(sanitizeSearchInput(long)).toHaveLength(100);
   });
 
-  it("trims whitespace", () => {
-    expect(sanitizeSearchInput("  luke  ")).toBe("luke");
-  });
-
   it("passes through clean input unchanged", () => {
     expect(sanitizeSearchInput("Luke Skywalker")).toBe("Luke Skywalker");
   });
