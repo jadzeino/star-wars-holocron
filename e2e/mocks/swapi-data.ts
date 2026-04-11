@@ -15,12 +15,12 @@ const luke = {
   eye_color: "blue",
   birth_year: "19BBY",
   gender: "male",
-  homeworld: "https://swapi.dev/api/planets/1/",
-  films: ["https://swapi.dev/api/films/1/", "https://swapi.dev/api/films/2/", "https://swapi.dev/api/films/3/"],
+  homeworld: "https://swapi.py4e.com/api/planets/1/",
+  films: ["https://swapi.py4e.com/api/films/1/", "https://swapi.py4e.com/api/films/2/", "https://swapi.py4e.com/api/films/3/"],
   species: [],
-  vehicles: ["https://swapi.dev/api/vehicles/14/"],
-  starships: ["https://swapi.dev/api/starships/12/"],
-  url: "https://swapi.dev/api/people/1/",
+  vehicles: ["https://swapi.py4e.com/api/vehicles/14/"],
+  starships: ["https://swapi.py4e.com/api/starships/12/"],
+  url: "https://swapi.py4e.com/api/people/1/",
   created: "2014-12-09T13:50:51.644000Z",
   edited: "2014-12-20T21:17:56.891000Z",
 };
@@ -34,12 +34,12 @@ const leia = {
   eye_color: "brown",
   birth_year: "19BBY",
   gender: "female",
-  homeworld: "https://swapi.dev/api/planets/2/",
-  films: ["https://swapi.dev/api/films/1/", "https://swapi.dev/api/films/2/"],
+  homeworld: "https://swapi.py4e.com/api/planets/2/",
+  films: ["https://swapi.py4e.com/api/films/1/", "https://swapi.py4e.com/api/films/2/"],
   species: [],
   vehicles: [],
   starships: [],
-  url: "https://swapi.dev/api/people/5/",
+  url: "https://swapi.py4e.com/api/people/5/",
   created: "2014-12-10T15:20:09.791000Z",
   edited: "2014-12-20T21:17:50.315000Z",
 };
@@ -53,12 +53,12 @@ const darthVader = {
   eye_color: "yellow",
   birth_year: "41.9BBY",
   gender: "male",
-  homeworld: "https://swapi.dev/api/planets/1/",
-  films: ["https://swapi.dev/api/films/1/"],
+  homeworld: "https://swapi.py4e.com/api/planets/1/",
+  films: ["https://swapi.py4e.com/api/films/1/"],
   species: [],
   vehicles: [],
-  starships: ["https://swapi.dev/api/starships/13/"],
-  url: "https://swapi.dev/api/people/4/",
+  starships: ["https://swapi.py4e.com/api/starships/13/"],
+  url: "https://swapi.py4e.com/api/people/4/",
   created: "2014-12-10T15:18:20.704000Z",
   edited: "2014-12-20T21:17:50.313000Z",
 };
@@ -73,12 +73,12 @@ function makePerson(id: number, name: string) {
     eye_color: "brown",
     birth_year: "unknown",
     gender: "male",
-    homeworld: "https://swapi.dev/api/planets/1/",
-    films: ["https://swapi.dev/api/films/1/"],
+    homeworld: "https://swapi.py4e.com/api/planets/1/",
+    films: ["https://swapi.py4e.com/api/films/1/"],
     species: [],
     vehicles: [],
     starships: [],
-    url: `https://swapi.dev/api/people/${id}/`,
+    url: `https://swapi.py4e.com/api/people/${id}/`,
     created: "2014-12-10T15:18:20.704000Z",
     edited: "2014-12-20T21:17:50.313000Z",
   };
@@ -137,12 +137,12 @@ const aNewHope = {
   director: "George Lucas",
   producer: "Gary Kurtz, Rick McCallum",
   release_date: "1977-05-25",
-  characters: ["https://swapi.dev/api/people/1/"],
-  planets: ["https://swapi.dev/api/planets/1/"],
-  starships: ["https://swapi.dev/api/starships/12/"],
-  vehicles: ["https://swapi.dev/api/vehicles/14/"],
-  species: ["https://swapi.dev/api/species/1/"],
-  url: "https://swapi.dev/api/films/1/",
+  characters: ["https://swapi.py4e.com/api/people/1/"],
+  planets: ["https://swapi.py4e.com/api/planets/1/"],
+  starships: ["https://swapi.py4e.com/api/starships/12/"],
+  vehicles: ["https://swapi.py4e.com/api/vehicles/14/"],
+  species: ["https://swapi.py4e.com/api/species/1/"],
+  url: "https://swapi.py4e.com/api/films/1/",
   created: "2014-12-10T14:23:31.880000Z",
   edited: "2014-12-20T19:49:45.256000Z",
 };
@@ -155,12 +155,12 @@ function makeFilm(id: number, title: string) {
     director: "George Lucas",
     producer: "Gary Kurtz",
     release_date: "1980-05-17",
-    characters: ["https://swapi.dev/api/people/1/"],
-    planets: ["https://swapi.dev/api/planets/1/"],
+    characters: ["https://swapi.py4e.com/api/people/1/"],
+    planets: ["https://swapi.py4e.com/api/planets/1/"],
     starships: [],
     vehicles: [],
     species: [],
-    url: `https://swapi.dev/api/films/${id}/`,
+    url: `https://swapi.py4e.com/api/films/${id}/`,
     created: "2014-12-10T14:23:31.880000Z",
     edited: "2014-12-20T19:49:45.256000Z",
   };
@@ -187,9 +187,9 @@ const tatooine = {
   terrain: "desert",
   surface_water: "1",
   population: "200000",
-  residents: ["https://swapi.dev/api/people/1/"],
-  films: ["https://swapi.dev/api/films/1/"],
-  url: "https://swapi.dev/api/planets/1/",
+  residents: ["https://swapi.py4e.com/api/people/1/"],
+  films: ["https://swapi.py4e.com/api/films/1/"],
+  url: "https://swapi.py4e.com/api/planets/1/",
   created: "2014-12-09T13:50:49.641000Z",
   edited: "2014-12-20T20:58:18.411000Z",
 };
@@ -206,8 +206,8 @@ function makePlanet(id: number, name: string) {
     surface_water: "40",
     population: "1000000",
     residents: [],
-    films: ["https://swapi.dev/api/films/1/"],
-    url: `https://swapi.dev/api/planets/${id}/`,
+    films: ["https://swapi.py4e.com/api/films/1/"],
+    url: `https://swapi.py4e.com/api/planets/${id}/`,
     created: "2014-12-10T11:35:48.479000Z",
     edited: "2014-12-20T20:58:18.420000Z",
   };
@@ -231,11 +231,11 @@ function makeSpecies(id: number, name: string) {
     hair_colors: "brown",
     eye_colors: "brown",
     average_lifespan: "120",
-    homeworld: "https://swapi.dev/api/planets/1/",
+    homeworld: "https://swapi.py4e.com/api/planets/1/",
     language: "Galactic Basic",
-    people: ["https://swapi.dev/api/people/1/"],
-    films: ["https://swapi.dev/api/films/1/"],
-    url: `https://swapi.dev/api/species/${id}/`,
+    people: ["https://swapi.py4e.com/api/people/1/"],
+    films: ["https://swapi.py4e.com/api/films/1/"],
+    url: `https://swapi.py4e.com/api/species/${id}/`,
     created: "2014-12-10T13:52:11.567000Z",
     edited: "2014-12-20T21:36:42.136000Z",
   };
@@ -262,8 +262,8 @@ const deathStar = {
   MGLT: "10",
   starship_class: "Deep Space Mobile Battlestation",
   pilots: [],
-  films: ["https://swapi.dev/api/films/1/"],
-  url: "https://swapi.dev/api/starships/9/",
+  films: ["https://swapi.py4e.com/api/films/1/"],
+  url: "https://swapi.py4e.com/api/starships/9/",
   created: "2014-12-10T16:36:50.509000Z",
   edited: "2014-12-20T21:26:24.783000Z",
 };
@@ -284,8 +284,8 @@ function makeStarship(id: number, name: string) {
     MGLT: "60",
     starship_class: "Starfighter",
     pilots: [],
-    films: ["https://swapi.dev/api/films/1/"],
-    url: `https://swapi.dev/api/starships/${id}/`,
+    films: ["https://swapi.py4e.com/api/films/1/"],
+    url: `https://swapi.py4e.com/api/starships/${id}/`,
     created: "2014-12-10T16:36:50.509000Z",
     edited: "2014-12-20T21:26:24.783000Z",
   };
@@ -316,8 +316,8 @@ function makeVehicle(id: number, name: string) {
     consumables: "2 months",
     vehicle_class: "wheeled",
     pilots: [],
-    films: ["https://swapi.dev/api/films/1/"],
-    url: `https://swapi.dev/api/vehicles/${id}/`,
+    films: ["https://swapi.py4e.com/api/films/1/"],
+    url: `https://swapi.py4e.com/api/vehicles/${id}/`,
     created: "2014-12-10T15:36:25.724000Z",
     edited: "2014-12-20T21:30:21.661000Z",
   };
@@ -336,6 +336,7 @@ type ListResponse = {
   results: Record<string, unknown>[];
 };
 
+// Builds a paginated API response
 function listResponse(
   results: Record<string, unknown>[],
   count: number,
@@ -345,12 +346,13 @@ function listResponse(
   const totalPages = Math.ceil(count / 10);
   return {
     count,
-    next: page < totalPages ? `https://swapi.dev/api/${resource}/?page=${page + 1}` : null,
-    previous: page > 1 ? `https://swapi.dev/api/${resource}/?page=${page - 1}` : null,
+    next: page < totalPages ? `https://swapi.py4e.com/api/${resource}/?page=${page + 1}` : null,
+    previous: page > 1 ? `https://swapi.py4e.com/api/${resource}/?page=${page - 1}` : null,
     results,
   };
 }
 
+// Simulates SWAPI search
 function filterByName(items: Record<string, unknown>[], search: string): Record<string, unknown>[] {
   const q = search.toLowerCase();
   return items.filter((item) => {
@@ -363,6 +365,7 @@ function filterByName(items: Record<string, unknown>[], search: string): Record<
 // All people across pages
 const allPeople = [...peoplePage1, ...peoplePage2, ...peoplePage3, ...peoplePage4, ...peoplePage5, ...peoplePage6, ...peoplePage7, ...peoplePage8, ...peoplePage9] as Record<string, unknown>[];
 
+// Central database: resource → data + pagination + count
 const allData: Record<string, { items: Record<string, unknown>[]; count: number; pages: Record<number, Record<string, unknown>[]> }> = {
   people: { items: allPeople, count: 82, pages: { 1: peoplePage1 as any, 2: peoplePage2 as any, 3: peoplePage3 as any, 4: peoplePage4 as any, 5: peoplePage5 as any, 6: peoplePage6 as any, 7: peoplePage7 as any, 8: peoplePage8 as any, 9: peoplePage9 as any } },
   films: { items: allFilms as any, count: 6, pages: { 1: allFilms as any } },
@@ -372,7 +375,9 @@ const allData: Record<string, { items: Record<string, unknown>[]; count: number;
   vehicles: { items: vehiclesPage1 as any, count: 39, pages: { 1: vehiclesPage1 as any } },
 };
 
-// Detail lookup by resource + id
+// Creates a lookup table: url → item
+// Example https://swapi.py4e.com/api/people/1/ → Luke
+// Allow for faster access (O(1)) vs searching arrays
 const detailMap: Record<string, Record<string, unknown>> = {};
 for (const items of Object.values(allData)) {
   for (const item of items.items) {
@@ -383,7 +388,7 @@ for (const items of Object.values(allData)) {
 
 /**
  * Returns a handler function for Playwright's page.route() that intercepts
- * all swapi.dev requests and returns mock data.
+ * all swapi.py4e.com requests and returns mock data.
  */
 export function handleSwapiRoute(url: URL): { status: number; body: string; contentType: string } | null {
   const pathname = url.pathname; // e.g. /api/people/ or /api/people/1/
@@ -392,7 +397,7 @@ export function handleSwapiRoute(url: URL): { status: number; body: string; cont
   const detailMatch = pathname.match(/^\/api\/(\w+)\/(\d+)\/?$/);
   if (detailMatch) {
     const [, resource, id] = detailMatch;
-    const key = `https://swapi.dev/api/${resource}/${id}/`;
+    const key = `https://swapi.py4e.com/api/${resource}/${id}/`;
     const item = detailMap[key];
     if (item) {
       return { status: 200, body: JSON.stringify(item), contentType: "application/json" };

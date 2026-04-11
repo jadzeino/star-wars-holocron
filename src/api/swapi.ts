@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://swapi.dev/api';
+export const BASE_URL = 'https://swapi.py4e.com/api';
 
 // fetching films logic
 export async function fetchFilms() {

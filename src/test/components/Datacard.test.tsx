@@ -10,10 +10,10 @@ describe("Datacard", () => {
     mass: "77",
     hair_color: "blond",
     skin_color: "fair",
-    url: "https://swapi.dev/api/people/1/",
+    url: "https://swapi.py4e.com/api/people/1/",
     created: "2014-12-09",
     edited: "2014-12-20",
-    homeworld: "https://swapi.dev/api/planets/1/",
+    homeworld: "https://swapi.py4e.com/api/planets/1/",
   };
 
   it("renders the item name", () => {

@@ -23,11 +23,11 @@ describe("getUrlFields - single URL string field", () => {
   it("extracts single URL as array", () => {
     const fields = getUrlFields({
       name: "Luke",
-      homeworld: "https://swapi.dev/api/planets/1/",
-      url: "https://swapi.dev/api/people/1/",
+      homeworld: "https://swapi.py4e.com/api/planets/1/",
+      url: "https://swapi.py4e.com/api/people/1/",
     });
     expect(fields).toEqual([
-      { key: "homeworld", urls: ["https://swapi.dev/api/planets/1/"] },
+      { key: "homeworld", urls: ["https://swapi.py4e.com/api/planets/1/"] },
     ]);
   });
 });
@@ -36,7 +36,7 @@ describe("getDataFields - number fields", () => {
   it("includes number fields as strings", () => {
     const fields = getDataFields({
       episode_id: 4,
-      url: "https://swapi.dev/api/films/1/",
+      url: "https://swapi.py4e.com/api/films/1/",
       created: "x",
       edited: "y",
     });

@@ -1,6 +1,7 @@
 import { test as base, expect } from "@playwright/test";
 import * as swapiMockModule from "./e2e/mocks/swapi-data.ts";
 
+/* find a valid function export from swapi-data.ts  either as export function or export default */
 const handleSwapiRoute =
   typeof swapiMockModule.handleSwapiRoute === "function"
     ? swapiMockModule.handleSwapiRoute
@@ -9,7 +10,7 @@ const handleSwapiRoute =
       : null;
 
 /**
- * Custom Playwright fixture that intercepts all swapi.dev requests
+ * Custom Playwright fixture that intercepts all swapi.py4e.com requests
  * and returns deterministic mock data.
  */
 export const test = base.extend({
@@ -18,7 +19,8 @@ export const test = base.extend({
       throw new Error("SWAPI mock handler export not found.");
     }
 
-    await page.route("**/swapi.dev/api/**", async (route) => {
+    // Intercepts network requests
+    await page.route("**/swapi.py4e.com/api/**", async (route) => {
       const url = new URL(route.request().url());
       const mock = handleSwapiRoute(url);
       if (mock) {
@@ -28,10 +30,12 @@ export const test = base.extend({
           body: mock.body,
         });
       } else {
+        // the real request go through instead
         await route.fallback();
       }
     });
 
+    // Pass the modified page to the test
     await use(page);
   },
 });

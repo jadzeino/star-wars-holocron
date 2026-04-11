@@ -26,6 +26,7 @@ export function useRelatedResources(urls: string[], enabled: boolean = true) {
       queryKey: ["related", url],
       queryFn: () => fetchByUrl(url),
       staleTime: 10 * 60 * 1000,
+      retry: 1,
       enabled,
     })),
   });
@@ -36,6 +37,7 @@ export function useRelatedResource(url: string | null) {
     queryKey: ["related", url],
     queryFn: () => fetchByUrl(url!),
     staleTime: 10 * 60 * 1000,
+    retry: 1,
     enabled: !!url,
   });
 }

@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-const BASE_URL = "https://swapi.dev/api";
+const BASE_URL = "https://swapi.py4e.com/api";
 
 export const RESOURCES = ["people", "films", "planets", "species", "starships", "vehicles"] as const;
 export type ResourceType = (typeof RESOURCES)[number];
@@ -142,7 +142,22 @@ export async function fetchResourceList(
   const res = await fetch(`${BASE_URL}/${resource}/?${params}`);
   if (!res.ok) throw new Error(`Failed to fetch ${resource}: ${res.status}`);
   const data = await res.json();
-  return ListResponseSchema.parse(data);
+  const parsedResponse = ListResponseSchema.parse(data);
+
+  if (isResourceValid(resource)) {
+    const schema = getSchemaForResource(resource as ResourceType);
+    if (schema) {
+      parsedResponse.results = parsedResponse.results.map((item) => {
+        const result = schema.safeParse(item);
+        if (!result.success) {
+          console.warn(`Zod error in list: ${resource}`, result.error);
+          return item as Record<string, unknown>;
+        }
+        return result.data as Record<string, unknown>;
+      });
+    }
+  }
+  return parsedResponse;
 }
 
 export async function fetchResourceDetail(
@@ -158,9 +173,32 @@ export async function fetchResourceDetail(
 }
 
 export async function fetchByUrl(url: string): Promise<Record<string, unknown>> {
+  const parsed = parseSwapiUrl(url);
+  if (parsed && isResourceValid(parsed.resource)) {
+    return fetchSectionByUrl(parsed.resource as ResourceType, url);
+  }
   const res = await fetch(url);
   if (!res.ok) throw new Error(`Failed to fetch ${url}: ${res.status}`);
   return res.json();
+}
+
+export async function fetchSectionByUrl(
+  resource: ResourceType,
+  url: string
+): Promise<Record<string, unknown>> {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Failed to fetch ${url}: ${res.status}`);
+  const data = await res.json();
+  const schema = getSchemaForResource(resource);
+  if (schema) {
+    const result = schema.safeParse(data);
+    if (!result.success) {
+      console.warn(`Zod error for URL: ${url}`, result.error);
+      return data;
+    }
+    return result.data as Record<string, unknown>;
+  }
+  return data;
 }
 
 // Helpers
@@ -209,9 +247,9 @@ export function getUrlFields(item: Record<string, unknown>): Array<{ key: string
   const urlFields: Array<{ key: string; urls: string[] }> = [];
   for (const [key, value] of Object.entries(item)) {
     if (key === "url" || key === "created" || key === "edited") continue;
-    if (typeof value === "string" && value.startsWith("https://swapi.dev/api/")) {
+    if (typeof value === "string" && value.startsWith(`${BASE_URL}/`)) {
       urlFields.push({ key, urls: [value] });
-    } else if (Array.isArray(value) && value.length > 0 && typeof value[0] === "string" && value[0].startsWith("https://swapi.dev/api/")) {
+    } else if (Array.isArray(value) && value.length > 0 && typeof value[0] === "string" && value[0].startsWith(`${BASE_URL}/`)) {
       urlFields.push({ key, urls: value });
     }
   }
@@ -224,7 +262,7 @@ export function getDataFields(item: Record<string, unknown>): Array<{ key: strin
   const fields: Array<{ key: string; value: string }> = [];
   for (const [key, value] of Object.entries(item)) {
     if (skip.includes(key)) continue;
-    if (typeof value === "string" && !value.startsWith("https://swapi.dev/api/")) {
+    if (typeof value === "string" && !value.startsWith(`${BASE_URL}/`)) {
       fields.push({ key, value });
     } else if (typeof value === "number") {
       fields.push({ key, value: String(value) });

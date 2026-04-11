@@ -34,7 +34,7 @@ export default function ResourceListPage() {
       "@type": "CollectionPage",
       name: `Star Wars ${sectorName}`,
       description: RESOURCE_DESCRIPTIONS[resource || ""],
-      url: `https://jadzeino.github.io/holocron/${resource}`,
+      url: `https://jadzeino.github.io/star-wars-holocron/${resource}`,
     },
   });
 
@@ -64,7 +64,7 @@ export default function ResourceListPage() {
   if (!resource || !isResourceValid(resource)) {
     return (
       <div className="flex-1 flex flex-col">
-        <Topbar searchValue="" onSearchChange={() => {}} showSearch={false} />
+        <Topbar searchValue="" onSearchChange={() => { }} showSearch={false} />
         <ErrorState message={`Unknown sector: ${resource}`} />
       </div>
     );

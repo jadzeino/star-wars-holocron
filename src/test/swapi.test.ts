@@ -11,7 +11,7 @@ import {
 
 describe("parseSwapiUrl (the regex nightmare)", () => {
   it("actually parses a valid SWAPI URL without crashing", () => {
-    expect(parseSwapiUrl("https://swapi.dev/api/people/1/")).toEqual({
+    expect(parseSwapiUrl("https://swapi.py4e.com/api/people/1/")).toEqual({
       resource: "people",
       id: "1",
     });
@@ -53,8 +53,8 @@ describe("getDataFields", () => {
     const fields = getDataFields({
       name: "Luke",
       height: "172",
-      url: "https://swapi.dev/api/people/1/",
-      homeworld: "https://swapi.dev/api/planets/1/",
+      url: "https://swapi.py4e.com/api/people/1/",
+      homeworld: "https://swapi.py4e.com/api/planets/1/",
       created: "2014-12-09",
     });
     expect(fields).toEqual([
@@ -68,13 +68,13 @@ describe("getUrlFields", () => {
   it("extracts URL array fields", () => {
     const fields = getUrlFields({
       name: "Luke",
-      films: ["https://swapi.dev/api/films/1/"],
-      url: "https://swapi.dev/api/people/1/",
+      films: ["https://swapi.py4e.com/api/films/1/"],
+      url: "https://swapi.py4e.com/api/people/1/",
       created: "x",
       edited: "y",
     });
     expect(fields).toEqual([
-      { key: "films", urls: ["https://swapi.dev/api/films/1/"] },
+      { key: "films", urls: ["https://swapi.py4e.com/api/films/1/"] },
     ]);
   });
 });
