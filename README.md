@@ -14,7 +14,7 @@
 
 **Star Wars Holocron** is a galactic database terminal — a knowledge base explorer for the Star Wars universe. In Star Wars lore, a **Holocron** is an ancient data storage device used by Jedi and Sith to preserve knowledge across generations. I chose this concept because it perfectly frames the app as a **data terminal** — a place where you access and browse structured records about people, films, planets, species, starships, and vehicles.
 
-The app connects to the [Star Wars API (SWAPI)](https://swapi.dev/documentation) and presents the data through a sci-fi terminal aesthetic, treating each API resource category as a "sector" that users can explore.
+The app connects to the [Star Wars API (SWAPI)](https://swapi.py4e.com/documentation) and presents the data through a sci-fi terminal aesthetic, treating each API resource category as a "sector" that users can explore.
 
 ---
 
@@ -311,4 +311,4 @@ AI was used as an accelerator — not a replacement for engineering judgement. A
 - **No global state management:** React Query handles server state; local UI state (theme, music, rounded mode) is managed via hooks + `localStorage`. 
 - **No image assets:** SWAPI doesn't provide images, so the app relies on typography, icons, and layout for visual interest.
 - **No `.env` for API URL:** The SWAPI base URL is hardcoded in the client rather than stored in an environment variable. This was a deliberate simplification for this challenge.
-- **SWAPI mirror:** The app uses `swapi.dev` as the API base URL.
+- **SWAPI mirror:** The app uses `swapi.py4e.com` as the API base URL — the faster, more reliable mirror of the original `swapi.dev`.
