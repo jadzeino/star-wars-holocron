@@ -25,8 +25,7 @@ test.describe("Home Page (fingers crossed)", () => {
     await expect(page.getByRole("main").locator("h1")).toContainText("people");
   });
 
-  // Skip this for now, it's throwing weird hydration errors in CI
-  test.skip("does not show search bar on home page", async ({ page }) => {
+  test("does not show search bar on home page", async ({ page }) => {
     await expect(page.locator("#search-input")).not.toBeVisible();
   });
 
